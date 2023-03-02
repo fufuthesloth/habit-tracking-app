@@ -316,8 +316,8 @@ class DatabaseOperations:
             (oldest_date,))
         habit = self.cursor.fetchone()
         if habit is not None:
-            habit = Habit(*habit)
-        return [habit]
+            habit = [Habit(*habit)]
+        return habit
 
     def return_shortest_tracked_habit(self) -> List[Habit]:
         """Returns list with data of the shortest tracked habit
@@ -335,8 +335,8 @@ class DatabaseOperations:
             (youngest_date,))
         habit = self.cursor.fetchone()
         if habit is not None:
-            habit = Habit(*habit)
-        return [habit]
+            habit = [Habit(*habit)]
+        return habit
 
     def display_history(self, id_: str) -> List[Habit]:
         """Returns historical data about given habits
