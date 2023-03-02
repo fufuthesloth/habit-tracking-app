@@ -1,0 +1,3 @@
+include habit_tracking_app/icons/*.png
+include habit_tracking_app/database/*.sql
+include readme_images/*.png
